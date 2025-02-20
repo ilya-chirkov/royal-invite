@@ -38,5 +38,221 @@ export default {
 </script>
 
 <style>
-@import "../assets/style.css";
+/* @import "../assets/style.css"; */
+
+
+.wrapper {
+    background-color: #fff;
+  }
+  .wrapper-dark {
+    background-color: #323232;
+    color: #fff;
+  }
+  .main {
+    margin-bottom: 100px;
+    padding: 70px 0 150px;
+  }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .main {
+      padding: 50px 0 150px;
+    }
+  }
+  .main .container {
+    border: 1px solid #aa835c;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 40px;
+    position: relative;
+    width: 100%;
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .main .container {
+      max-width: 500px;
+    }
+  }
+  @media (min-width: 501px) and (max-width: 768px) {
+    .main .container {
+      max-width: 440px;
+    }
+  }
+  @media (min-width: 400px) and (max-width: 500px) {
+    .main .container {
+      max-width: 360px;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 399px) {
+    .main .container {
+      max-width: 300px;
+    }
+  }
+  .main__wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 60px;
+    max-width: 240px;
+    width: 100%;
+  }
+  .main__image {
+    height: 110px;
+    margin: 0 auto;
+    position: relative;
+    width: 100px;
+  }
+  @media (min-width: 600px) and (max-width: 768px) {
+    .main__image {
+      height: 110px;
+      width: 100px;
+    }
+  }
+  @media (min-width: 430px) and (max-width: 599px) {
+    .main__image {
+      height: 90px;
+      width: 85px;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 429px) {
+    .main__image {
+      height: 90px;
+      width: 85px;
+    }
+  }
+  .main__jpg {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .main__letter {
+    color: #665f55;
+    font-family: KyivType Sans;
+    font-size: 88px;
+    font-weight: 200;
+    line-height: 106px;
+    text-align: center;
+  }
+  @media (min-width: 320px) and (max-width: 599px) {
+    .main__letter {
+      font-size: 78px;
+      line-height: 94px;
+    }
+  }
+  .main__wrap {
+    margin-bottom: 60px;
+  }
+  .main__number {
+    color: #665f55;
+    font-family: KyivType Sans;
+    font-size: 56px;
+    font-weight: 200;
+    letter-spacing: 10px;
+    line-height: 66px;
+    text-align: center;
+  }
+  @media (min-width: 320px) and (max-width: 599px) {
+    .main__number {
+      font-size: 56px;
+      line-height: 68px;
+    }
+  }
+  .main__text {
+    color: #665f55;
+    font-family: Open Sans, serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    margin: 0 auto 35px;
+    max-width: 450px;
+    text-align: center;
+    width: 100%;
+  }
+  @media (min-width: 320px) and (max-width: 599px) {
+    .main__text {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .main__text-bottom {
+    margin-bottom: 0;
+  }
+  .main__title {
+    color: #665f55;
+    font-family: KyivType Sans;
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 38px;
+    text-align: center;
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .main__title {
+      font-size: 28px;
+      line-height: 38px;
+    }
+  }
+  @media (min-width: 600px) and (max-width: 768px) {
+    .main__title {
+      font-size: 30px;
+      line-height: 38px;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 599px) {
+    .main__title {
+      font-size: 26px;
+      line-height: 34px;
+    }
+  }
+  .main__title-middle {
+    color: #665f55;
+    font-family: KyivType Sans;
+    font-size: 42px;
+    font-weight: 200;
+    line-height: 48px;
+    text-align: center;
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .main__title-middle {
+      font-size: 42px;
+      line-height: 48px;
+    }
+  }
+  @media (min-width: 600px) and (max-width: 768px) {
+    .main__title-middle {
+      font-size: 42px;
+      line-height: 48px;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 599px) {
+    .main__title-middle {
+      font-size: 38px;
+      line-height: 44px;
+    }
+  }
+  .main__textwrap {
+    align-items: center;
+    column-gap: 15px;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 10px;
+    margin: 0 auto 40px;
+  }
+  @media (min-width: 600px) and (max-width: 768px) {
+    .main__textwrap {
+      letter-spacing: 5px;
+      margin-bottom: 60px;
+    }
+  }
+  @media (min-width: 430px) and (max-width: 599px) {
+    .main__textwrap {
+      column-gap: 10px;
+      letter-spacing: 0;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 429px) {
+    .main__textwrap {
+      column-gap: 8px;
+      letter-spacing: 0;
+    }
+  }
 </style>
