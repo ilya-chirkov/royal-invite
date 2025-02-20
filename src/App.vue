@@ -1,26 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <main-section/>
+    <timer-count/>
+    <schedule-wedding/>
+    <place-w/>
+    <!-- <dress-code/> -->
+    <!-- <detail-s/> -->
+
+    <back-form/>
+    <back-contact/>|
+    <custom-footer/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BackContact from './components/BackContact.vue'
+import BackForm from './components/BackForm.vue'
+import CustomFooter from './components/CustomFooter.vue'
+// import DetailS from './components/DetailS.vue'
+// import DressCode from './components/DressCode.vue'
+import MainSection from './components/MainSection.vue'
+import PlaceW from './components/PlaceW.vue'
+import ScheduleWedding from './components/ScheduleWedding.vue'
+import TimerCount from './components/TimerCount.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: { MainSection, ScheduleWedding, PlaceW, BackForm, BackContact, CustomFooter, TimerCount,  },
+
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
