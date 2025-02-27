@@ -8,7 +8,7 @@
     <div class="container">
       <div class="details__wrap">
         <div>
-          <h2 class="details__title">Details</h2>
+          <h2 class="details__title">Детали</h2>
         </div>
         <div>
           <div class="details__content">
@@ -53,7 +53,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 
 
 .details {

@@ -1,34 +1,34 @@
 <template>
-<div>
-                <div class="main">
-                  <div class="container">
-                    <div class="main__wrapper">
-                      <h1 class="main__letter">Д</h1>
-                      <div class="main__image">
-                        <img class="main__jpg" src="../assets/plant.png" alt="couple" />
-                      </div>
-                      <h1 class="main__letter">И</h1>
-                    </div>
-                    <div class="main__wrap">
-                      <p class="main__number">16</p>
-                      <p class="main__number">08</p>
-                      <p class="main__number">2025</p>
-                    </div>
-                    <p class="main__text">
-                      Мы рады пригласить вас разделить с нами счастливый день
-                      нашей свадьбы!
-                    </p>
-                    <div class="main__textwrap">
-                      <h1 class="main__title">Диана</h1>
-                      <h1 class="main__title main__title-middle">&amp;</h1>
-                      <h1 class="main__title">Илья</h1>
-                    </div>
-                    <p class="main__text main__text-bottom">
-                      Место, где живет любовь
-                    </p>
-                  </div>
-                </div>
-              </div>
+  <div>
+    <div class="main">
+      <div class="container">
+        <div class="main__wrapper">
+          <h1 class="main__letter fade-in scale-up">Д</h1>
+          <div class="main__image float">
+            <img class="main__jpg" src="../assets/plant.png" alt="couple" />
+          </div>
+          <h1 class="main__letter fade-in scale-up">И</h1>
+        </div>
+        <div class="main__wrap">
+          <p class="main__number fade-in">16</p>
+          <p class="main__number fade-in">08</p>
+          <p class="main__number fade-in">2025</p>
+        </div>
+        <p class="main__text fade-in">
+          Мы рады пригласить вас разделить с нами счастливый день
+          нашей свадьбы!
+        </p>
+        <div class="main__textwrap fade-in">
+          <h1 class="main__title scale-up">Диана</h1>
+          <h1 class="main__title main__title-middle">&</h1>
+          <h1 class="main__title scale-up">Илья</h1>
+        </div>
+        <p class="main__text main__text-bottom fade-in">
+          Место, где живет любовь
+        </p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -37,9 +37,7 @@ export default {
 };
 </script>
 
-<style>
-/* @import "../assets/style.css"; */
-
+<style scoped>
 
 .wrapper {
     background-color: #fff;
@@ -58,7 +56,7 @@ export default {
     }
   }
   .main .container {
-    border: 1px solid #aa835c;
+    border: 2px groove #aa835c;
     margin: 0 auto;
     max-width: 600px;
     padding: 40px;
@@ -255,4 +253,46 @@ export default {
       letter-spacing: 0;
     }
   }
+  /* Анимация появления */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.scale-up {
+  animation: scaleUp 0.8s ease-in-out;
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
 </style>

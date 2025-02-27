@@ -3,7 +3,7 @@
     <div class="container">
       <div class="contacts__wrapper">
         <div>
-          <h3 class="contacts__title">Contacts</h3>
+          <h3 class="contacts__title">Контакты</h3>
         </div>
         <div>
           <p class="contacts__text">
@@ -50,7 +50,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 
 
 .contacts {

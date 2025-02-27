@@ -3,7 +3,7 @@
     <div class="container">
       <div class="timing__wrap">
         <div>
-          <h2 class="timing__title">Timing</h2>
+          <h2 class="timing__title">Время</h2>
         </div>
         <div class="timing__content">
           <div class="timing__wrapper">
@@ -153,7 +153,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
   .timing {
     margin-bottom: 150px;
   }

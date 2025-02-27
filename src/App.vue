@@ -1,13 +1,11 @@
 <template>
   <div>
-    <live-back/>
     <main-section/>
     <timer-count/>
     <schedule-wedding/>
     <place-w/>
     <dress-code/>
     <details-part/>
-
     <back-form/>
     <back-contact/>|
     <custom-footer/>

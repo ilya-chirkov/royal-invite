@@ -72,7 +72,7 @@
   };
   </script>
 
-<style>
+<style scoped>
   .timer {
     margin-bottom: 350px;
     position: relative;

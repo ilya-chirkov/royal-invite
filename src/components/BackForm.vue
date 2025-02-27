@@ -3,7 +3,7 @@
     <div class="container">
       <div class="form__wrapper">
         <div>
-          <h3 class="form__title">Form</h3>
+          <h3 class="form__title">Анкета</h3>
         </div>
         <div>
           <div class="form__textwrap">
@@ -41,14 +41,26 @@
               <div class="checkboxes__row">
                 <div class="checkboxes__item">
                   <label class="checkbox style-d" for="yes"
-                    ><input v-model="formData.attending" type="radio" id="yes" name="attending" value="Да" />
+                    ><input
+                      v-model="formData.attending"
+                      type="radio"
+                      id="yes"
+                      name="attending"
+                      value="Да"
+                    />
                     <div class="checkbox__checkmark"></div>
                     <p class="checkbox__body">Да, буду на свадьбе</p></label
                   >
                 </div>
                 <div class="checkboxes__item">
                   <label class="checkbox style-d" for="no"
-                    ><input v-model="formData.attending" type="radio" id="no" name="attending" value="Нет" />
+                    ><input
+                      v-model="formData.attending"
+                      type="radio"
+                      id="no"
+                      name="attending"
+                      value="Нет"
+                    />
                     <div class="checkbox__checkmark"></div>
                     <p class="checkbox__body">
                       Нет, не смогу быть на свадьбе
@@ -98,7 +110,7 @@
                 <div class="checkboxes__item">
                   <label class="checkbox style-d" for="alcChoice1"
                     ><input
-                    v-model="formData.alcohol.vine"
+                      v-model="formData.alcohol.vine"
                       type="checkbox"
                       id="alcChoice1"
                       name="alcohol"
@@ -111,7 +123,7 @@
                 <div class="checkboxes__item">
                   <label class="checkbox style-d" for="alcChoice2"
                     ><input
-                    v-model="formData.alcohol.champagne"
+                      v-model="formData.alcohol.champagne"
                       type="checkbox"
                       id="alcChoice2"
                       name="alcohol"
@@ -122,22 +134,9 @@
                   >
                 </div>
                 <div class="checkboxes__item">
-                  <label class="checkbox style-d" for="alcChoice3"
-                    ><input
-                    v-model="formData.alcohol.viski"
-                      type="checkbox"
-                      id="alcChoice3"
-                      name="alcohol"
-                      value="Виски"
-                    />
-                    <div class="checkbox__checkmark"></div>
-                    <p class="checkbox__body">Виски</p></label
-                  >
-                </div>
-                <div class="checkboxes__item">
                   <label class="checkbox style-d" for="alcChoice4"
                     ><input
-                    v-model="formData.alcohol.konyak"
+                      v-model="formData.alcohol.konyak"
                       type="checkbox"
                       id="alcChoice4"
                       name="alcohol"
@@ -150,7 +149,7 @@
                 <div class="checkboxes__item">
                   <label class="checkbox style-d" for="alcChoice5"
                     ><input
-                    v-model="formData.alcohol.vodka"
+                      v-model="formData.alcohol.vodka"
                       type="checkbox"
                       id="alcChoice5"
                       name="alcohol"
@@ -163,7 +162,7 @@
                 <div class="checkboxes__item">
                   <label class="checkbox style-d" for="alcChoice6"
                     ><input
-                    v-model="formData.alcohol.NotDrink"
+                      v-model="formData.alcohol.NotDrink"
                       type="checkbox"
                       id="alcChoice6"
                       name="alcohol"
@@ -178,6 +177,18 @@
             <div class="form__wrapbtn">
               <button class="form__btn" type="submit">Отправить</button>
             </div>
+            <div v-if="isModalOpen" class="modal-overlay" @click="closeModal">
+              <transition name="fade">
+                <div class="modal" @click.stop>
+                  <div class="modal__header">
+                    <span class="modal__icon">✅</span>
+                    <h2>Успешно отправлено!</h2>
+                  </div>
+                  <p class="modal__text">Спасибо за Ваш ответ!</p>
+                  <button class="modal__button" @click="closeModal">Ок</button>
+                </div>
+              </transition>
+            </div>
           </form>
         </div>
       </div>
@@ -189,6 +200,9 @@
 import { ref } from "vue";
 import axios from "axios";
 
+const isModalOpen = ref(false);
+const userNumber = ref(0);
+
 const formData = ref({
   userName: "",
   attending: "",
@@ -196,47 +210,59 @@ const formData = ref({
   alcohol: {
     vine: false,
     champagne: false,
-    viski: false,
     konyak: false,
     vodka: false,
     NotDrink: false,
   },
 });
 
+const closeModal = () => {
+  isModalOpen.value = false;
+};
+
 const submitForm = async () => {
   const botToken = process.env.VUE_APP_BOT_TOKEN;
   const chatId = process.env.VUE_APP_CHAT_ID;
 
-  
-  const message = `*Новая анкета*:
+  const message = `🎉 *Новая анкета №${userNumber.value = userNumber.value+1}* 🎉
 
-*Имя и Фамилия:* ${formData.value.userName}
+👤 *Гость:* ${formData.value.userName}
 
-*Присутствие на свадьбе:* ${formData.value.attending === "Да" ? "✅" : "❌"} ${formData.value.attending}
+💍 *Присутствие:* ${formData.value.attending === "Да" ? "✅ Буду на свадьбе!" : "❌ Не смогу прийти"}
 
-*Трансфер:* ${formData.value.transfer === "Да" ? "🚗" : "❌"} ${formData.value.transfer}
+🚖 *Трансфер:* ${formData.value.transfer === "Да" ? "🚗 Нужен" : "❌ Не нужен"}
 
--------------- *Алкоголь* --------------
+🥂 *Алкоголь:*
+${[
+  formData.value.alcohol.vine && "🍷 Вино",
+  formData.value.alcohol.champagne && "🍾 Шампанское",
+  formData.value.alcohol.konyak && "🥂 Коньяк",
+  formData.value.alcohol.vodka && "🍸 Водка",
+  formData.value.alcohol.NotDrink && "🥤 Безалкогольные напитки",
+].filter(Boolean).join(", ") || "❌ Не пьёт"}
 
-*Вино:* ${formData.value.alcohol.vine ? "🍷 Да" : "❌ Нет"}
-
-*Шампанское:* ${formData.value.alcohol.champagne ? "🍾 Да" : "❌ Нет"}
-
-*Виски:* ${formData.value.alcohol.viski ? "🥃 Да" : "❌ Нет"}
-
-*Коньяк:* ${formData.value.alcohol.konyak ? "🥂 Да" : "❌ Нет"}
-
-*Водка:* ${formData.value.alcohol.vodka ? "🍸 Да" : "❌ Нет"}
-
-*Безалкогольные напитки:* ${formData.value.alcohol.NotDrink ? "🥤 Да" : "❌ Нет"}`;
+✨ *Спасибо за ответ!* ✨`;
 
   try {
     await axios.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {
       chat_id: chatId,
       text: message,
-      parse_mode: "Markdown" 
+      parse_mode: "Markdown",
     });
-    alert("Данные успешно отправлены");
+    formData.value = {
+      userName: "",
+      attending: "",
+      transfer: "",
+      alcohol: {
+        vine: false,
+        champagne: false,
+        viski: false,
+        konyak: false,
+        vodka: false,
+        NotDrink: false,
+      },
+    };
+    isModalOpen.value = true;
   } catch (error) {
     console.error("Ошибка при отправке данных:", error);
     alert("Ошибка при отправке данных");
@@ -244,7 +270,7 @@ const submitForm = async () => {
 };
 </script>
 
-<style>
+<style scoped>
 .form {
   margin-bottom: 150px;
   z-index: 4;
@@ -592,6 +618,90 @@ const submitForm = async () => {
   .form .checkbox.style-d .checkbox__body {
     font-size: 14px;
     line-height: 21px;
+  }
+}
+
+/* Анимация */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Фон модалки */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Модальное окно */
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 350px;
+  animation: scaleIn 0.3s ease;
+}
+
+/* Хедер с иконкой */
+.modal__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Текст */
+.modal__text {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Кнопка */
+.modal__button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.modal__button:hover {
+  background: #45a049;
+}
+
+/* Анимация увеличения */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 </style>

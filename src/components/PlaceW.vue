@@ -1,14 +1,14 @@
 <template>
   <div class="location">
     <div>
-      <h2 class="location__title">Location</h2>
+      <h2 class="location__title">Локация</h2>
     </div>
     <div>
       <div class="works">
         <div class="works__wrap">
           <div class="works__content">
             <h3 class="works__title">Усадьба "Экзотика"</h3>
-            <p class="works__text">г.Бобруйск, ул. Калиновского, 12</p>
+            <p class="works__text">г.Бобруйск, д. Спорное 29 </p>
           </div>
         </div>
         <div class="works__wrap">
@@ -42,7 +42,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 
 .location {
     margin-bottom: 150px;
