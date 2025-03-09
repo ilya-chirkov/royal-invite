@@ -8,7 +8,7 @@
         <div class="works__wrap">
           <div class="works__content">
             <h3 class="works__title">Усадьба "Экзотика"</h3>
-            <p class="works__text">г.Бобруйск, д. Спорное 29 </p>
+            <p class="works__text">г. Бобруйск, д. Спорное, 29 </p>
           </div>
         </div>
         <div class="works__wrap">
@@ -17,7 +17,7 @@
         <div class="works__wrap works__wrap-none">
           <div class="works__content">
             <h3 class="works__title">Праздничный банкет</h3>
-            <p class="works__text">16.30</p>
+            <p class="works__text">17.00</p>
           </div>
         </div>
         <div class="works__wrap">

@@ -1,5 +1,5 @@
 <template>
-  <div class="timing">
+  <div class="timing ">
     <div class="container">
       <div class="timing__wrap">
         <div>
@@ -20,41 +20,14 @@
             <div class="timing__textwrap">
               <div>
                 <div class="timing__textwraptop">
-                  <p class="timing__subtitle">13.30</p>
-                  <p class="timing__text">Трансфер из г.Минска</p>
+                  <p class="timing__subtitle">14:50</p>
+                  <p class="timing__text">Трансфер из г. Бобруйска</p>
                 </div>
               </div>
               <div>
                 <div class="timing__textwrapbottom">
                   <p class="timing__text timing__text-bottom">
-                    Возле ст.м. Восток вас будет ожидать микроавтобус
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="timing__wrapper">
-            <div class="timing__img">
-              <div>
-                <img
-                  loading="lazy"
-                  class="timing__png"
-                  src="../assets/t2.png"
-                  alt="couple"
-                />
-              </div>
-            </div>
-            <div class="timing__textwrap">
-              <div>
-                <div class="timing__textwraptop">
-                  <p class="timing__subtitle">14.30</p>
-                  <p class="timing__text">Выездная регистрация</p>
-                </div>
-              </div>
-              <div>
-                <div class="timing__textwrapbottom">
-                  <p class="timing__text timing__text-bottom">
-                    Разделите с нами трогательный момент создания семьи
+                    Возле автобусного вокзала 
                   </p>
                 </div>
               </div>
@@ -74,7 +47,7 @@
             <div class="timing__textwrap">
               <div>
                 <div class="timing__textwraptop">
-                  <p class="timing__subtitle">15.30</p>
+                  <p class="timing__subtitle">15:30</p>
                   <p class="timing__text">Фуршет</p>
                 </div>
               </div>
@@ -94,6 +67,33 @@
                 <img
                   loading="lazy"
                   class="timing__png"
+                  src="../assets/t2.png"
+                  alt="couple"
+                />
+              </div>
+            </div>
+            <div class="timing__textwrap">
+              <div>
+                <div class="timing__textwraptop">
+                  <p class="timing__subtitle">16:00</p>
+                  <p class="timing__text">Выездная церемония</p>
+                </div>
+              </div>
+              <div>
+                <div class="timing__textwrapbottom">
+                  <p class="timing__text timing__text-bottom">
+                    Разделите с нами трогательный момент создания семьи
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="timing__wrapper">
+            <div class="timing__img">
+              <div>
+                <img
+                  loading="lazy"
+                  class="timing__png"
                   src="../assets/t4.png"
                   alt="couple"
                 />
@@ -102,7 +102,7 @@
             <div class="timing__textwrap">
               <div>
                 <div class="timing__textwraptop">
-                  <p class="timing__subtitle">16.30</p>
+                  <p class="timing__subtitle">17:00</p>
                   <p class="timing__text">Праздничный банкет</p>
                 </div>
               </div>
@@ -129,7 +129,7 @@
             <div class="timing__textwrap">
               <div>
                 <div class="timing__textwraptop">
-                  <p class="timing__subtitle">23.00</p>
+                  <p class="timing__subtitle">23:30</p>
                   <p class="timing__text">Окончание банкета</p>
                 </div>
               </div>
@@ -156,6 +156,7 @@ export default {};
 <style scoped>
   .timing {
     margin-bottom: 150px;
+    margin-top: -70px;
   }
   .timing .container {
     margin: 0 auto;

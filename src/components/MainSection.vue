@@ -15,8 +15,7 @@
           <p class="main__number fade-in">2025</p>
         </div>
         <p class="main__text fade-in">
-          Мы рады пригласить вас разделить с нами счастливый день
-          нашей свадьбы!
+          Этот день будет для нас особенным, и мы хотим провести его в кругу близких и друзей.
         </p>
         <div class="main__textwrap fade-in">
           <h1 class="main__title scale-up">Диана</h1>
@@ -24,7 +23,7 @@
           <h1 class="main__title scale-up">Илья</h1>
         </div>
         <p class="main__text main__text-bottom fade-in">
-          Место, где живет любовь
+          Ждём Вас!
         </p>
       </div>
     </div>
@@ -48,7 +47,7 @@ export default {
   }
   .main {
     margin-bottom: 100px;
-    padding: 70px 0 150px;
+    padding: 70px 0 120px;
   }
   @media (min-width: 320px) and (max-width: 767px) {
     .main {
@@ -165,6 +164,7 @@ export default {
     max-width: 450px;
     text-align: center;
     width: 100%;
+    font-weight: 500;
   }
   @media (min-width: 320px) and (max-width: 599px) {
     .main__text {
@@ -203,7 +203,7 @@ export default {
   }
   .main__title-middle {
     color: #665f55;
-    font-family: KyivType Sans;
+    font-family: system-ui;
     font-size: 42px;
     font-weight: 200;
     line-height: 48px;
