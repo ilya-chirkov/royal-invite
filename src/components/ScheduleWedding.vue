@@ -20,7 +20,7 @@
             <div class="timing__textwrap">
               <div>
                 <div class="timing__textwraptop">
-                  <p class="timing__subtitle">14:50</p>
+                  <p class="timing__subtitle">14:40</p>
                   <p class="timing__text">Трансфер из г. Бобруйска</p>
                 </div>
               </div>
