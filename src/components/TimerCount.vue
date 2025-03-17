@@ -74,7 +74,7 @@
 
 <style scoped>
   .timer {
-    margin-bottom: 350px;
+    margin-bottom: 250px;
     position: relative;
   }
   @media (min-width: 320px) and (max-width: 434px) {

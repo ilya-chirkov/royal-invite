@@ -46,12 +46,12 @@ export default {
     color: #fff;
   }
   .main {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     padding: 70px 0 120px;
   }
   @media (min-width: 320px) and (max-width: 767px) {
     .main {
-      padding: 50px 0 150px;
+      padding: 25px 0 150px;
     }
   }
   .main .container {
