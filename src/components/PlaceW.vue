@@ -12,7 +12,7 @@
           </div>
         </div>
         <div class="works__wrap">
-          <img class="works__jpg" src="../assets/loc2.jpg" alt="work" />
+          <img class="works__jpg" src="../assets/location3.jpg" alt="work" />
         </div>
         <div class="works__wrap works__wrap-none">
           <div class="works__content">
@@ -21,7 +21,7 @@
           </div>
         </div>
         <div class="works__wrap">
-          <img class="works__jpg" src="../assets/loс1.jpg" alt="work" />
+          <img class="works__jpg" src="../assets/location1.jpg" alt="work" />
         </div>
         <div class="works__wrap">
           <div class="works__content">
