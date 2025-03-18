@@ -52,8 +52,8 @@ export default {
   @font-face {
     font-display: swap;
     font-family: KyivType Sans;
-    src: local("KyivType Sans"),
-      url(./assets/KyivTypeSans-VarGX.ttf);
+    src: local("GreatVibes"),
+      url(./assets/GreatVibes-Regular.ttf);
   }
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
