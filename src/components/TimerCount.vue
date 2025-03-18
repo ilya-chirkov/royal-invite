@@ -134,7 +134,7 @@
   }
   @media (min-width: 320px) and (max-width: 767px) {
     .timer__title {
-      font-size: 18px;
+      font-size: 28px;
       line-height: 26px;
     }
   }

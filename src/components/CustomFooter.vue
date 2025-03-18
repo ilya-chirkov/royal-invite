@@ -14,7 +14,7 @@
             </div>
             <div class="footer__namewrap">
               <p class="footer__text">Диана</p>
-              <p class="footer__and">&amp;</p>
+              <p class="footer__and">&</p>
               <p class="footer__text">Илья</p>
             </div>
           </div>
@@ -119,7 +119,7 @@ export default {};
   }
   .footer__and {
     color: #665f55;
-    font-family: Open Sans, sans-serif;
+    font-family: KyivType Sans, sans-serif;
     font-size: 110px;
     font-weight: 300;
     left: 50px;
