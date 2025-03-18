@@ -19,7 +19,7 @@
         </p>
         <div class="main__textwrap fade-in">
           <h1 class="main__title scale-up">Диана</h1>
-          <h1 class="main__title main__title-middle">&</h1>
+          <h1 class="main__title main__title-middle"> & </h1>
           <h1 class="main__title scale-up">Илья</h1>
         </div>
         <p class="main__text main__text-bottom fade-in">

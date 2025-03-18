@@ -29,10 +29,10 @@
                 autocomplete="off"
                 value=""
               />
-              <p class="form__text form__text-mini">
+              <!-- <p class="form__text form__text-mini">
                 Если вы будете в компании своего спутника/спутницы, просим
                 дополнительно внести его/ее данные в графу.
-              </p>
+              </p> -->
             </div>
             <div class="form__yes">
               <p class="form__text form__text-subtitle">
@@ -71,7 +71,7 @@
             </div>
             <div class="form__yes">
               <p class="form__text form__text-subtitle">
-                Необходим ли Вам трансфер?
+                Необходим ли трансфер из Бобруйска до усадьбы?
               </p>
               <div class="checkboxes__row">
                 <div class="checkboxes__item">
