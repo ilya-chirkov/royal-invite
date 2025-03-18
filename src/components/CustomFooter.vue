@@ -45,7 +45,7 @@ export default {};
   }
   @media (min-width: 320px) and (max-width: 767px) {
     .footer__title {
-      font-size: 24px;
+      font-size: 36px;
       line-height: 38px;
     }
   }
