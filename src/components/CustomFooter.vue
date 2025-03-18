@@ -37,7 +37,7 @@ export default {};
   .footer__title {
     color: #665f55;
     font-family: KyivType Sans, Open Sans, sans-serif;
-    font-size: 36px;
+    font-size: 44px;
     font-weight: 300;
     line-height: 46px;
     margin-bottom: 20px;

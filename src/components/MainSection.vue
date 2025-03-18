@@ -7,7 +7,7 @@
           <div class="main__image float">
             <img class="main__jpg" src="../assets/plant.png" alt="couple" />
           </div>
-          <h1 class="main__letter fade-in scale-up">И</h1>
+          <h1 class="main__letter fade-in scale-up"> И</h1>
         </div>
         <div class="main__wrap">
           <p class="main__number fade-in">16</p>
@@ -87,7 +87,7 @@ export default {
     display: flex;
     justify-content: space-between;
     margin: 0 auto 60px;
-    max-width: 240px;
+    max-width: 280px;
     width: 100%;
   }
   .main__image {
@@ -132,7 +132,7 @@ export default {
   }
   @media (min-width: 320px) and (max-width: 599px) {
     .main__letter {
-      font-size: 78px;
+      font-size: 72px;
       line-height: 94px;
     }
   }
@@ -203,7 +203,6 @@ export default {
   }
   .main__title-middle {
     color: #665f55;
-    font-family: system-ui;
     font-size: 42px;
     font-weight: 200;
     line-height: 48px;

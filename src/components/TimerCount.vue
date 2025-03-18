@@ -125,8 +125,8 @@
   }
   .timer__title {
     color: #665f55;
-    font-family: Open Sans, serif;
-    font-size: 20px;
+    font-family: KyivType Sans, serif;
+    font-size: 36px;
     font-weight: 300;
     line-height: 28px;
     margin-bottom: 50px;
