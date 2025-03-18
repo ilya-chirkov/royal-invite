@@ -117,33 +117,7 @@
                       value="Вино"
                     />
                     <div class="checkbox__checkmark"></div>
-                    <p class="checkbox__body">Вино</p></label
-                  >
-                </div>
-                <div class="checkboxes__item">
-                  <label class="checkbox style-d" for="alcChoice2"
-                    ><input
-                      v-model="formData.alcohol.champagne"
-                      type="checkbox"
-                      id="alcChoice2"
-                      name="alcohol"
-                      value="Шампанское"
-                    />
-                    <div class="checkbox__checkmark"></div>
-                    <p class="checkbox__body">Шампанское</p></label
-                  >
-                </div>
-                <div class="checkboxes__item">
-                  <label class="checkbox style-d" for="alcChoice4"
-                    ><input
-                      v-model="formData.alcohol.konyak"
-                      type="checkbox"
-                      id="alcChoice4"
-                      name="alcohol"
-                      value="Коньяк"
-                    />
-                    <div class="checkbox__checkmark"></div>
-                    <p class="checkbox__body">Коньяк</p></label
+                    <p class="checkbox__body">Напитки средней крепости</p></label
                   >
                 </div>
                 <div class="checkboxes__item">
@@ -156,7 +130,7 @@
                       value="Водка"
                     />
                     <div class="checkbox__checkmark"></div>
-                    <p class="checkbox__body">Водка</p></label
+                    <p class="checkbox__body">"Покрепче"</p></label
                   >
                 </div>
                 <div class="checkboxes__item">
@@ -209,8 +183,6 @@ const formData = ref({
   transfer: "",
   alcohol: {
     vine: false,
-    champagne: false,
-    konyak: false,
     vodka: false,
     NotDrink: false,
   },
@@ -224,22 +196,29 @@ const submitForm = async () => {
   const botToken = process.env.VUE_APP_BOT_TOKEN;
   const chatId = process.env.VUE_APP_CHAT_ID;
 
-  const message = `🎉 *Новая анкета №${userNumber.value = userNumber.value+1}* 🎉
+  const message = `🎉 *Новая анкета №${(userNumber.value =
+    userNumber.value + 1)}* 🎉
 
 👤 *Гость:* ${formData.value.userName}
 
-💍 *Присутствие:* ${formData.value.attending === "Да" ? "✅ Буду на свадьбе!" : "❌ Не смогу прийти"}
+💍 *Присутствие:* ${
+    formData.value.attending === "Да"
+      ? "✅ Буду на свадьбе!"
+      : "❌ Не смогу прийти"
+  }
 
-🚖 *Трансфер:* ${formData.value.transfer === "Да" ? "🚗 Нужен" : "❌ Не нужен"}
+ *Трансфер:* ${formData.value.transfer === "Да" ? " ✅ Нужен" : "❌ Не нужен"}
 
 🥂 *Алкоголь:*
-${[
-  formData.value.alcohol.vine && "🍷 Вино",
-  formData.value.alcohol.champagne && "🍾 Шампанское",
-  formData.value.alcohol.konyak && "🥂 Коньяк",
-  formData.value.alcohol.vodka && "🍸 Водка",
-  formData.value.alcohol.NotDrink && "🥤 Безалкогольные напитки",
-].filter(Boolean).join(", ") || "❌ Не пьёт"}
+${
+  [
+    formData.value.alcohol.vine && " Слабоалкогольные",
+    formData.value.alcohol.vodka && " Покрепче",
+    formData.value.alcohol.NotDrink && " Безалкогольные напитки",
+  ]
+    .filter(Boolean)
+    .join(", ") || "❌ Не пьёт"
+}
 
 ✨ *Спасибо за ответ!* ✨`;
 
@@ -255,9 +234,6 @@ ${[
       transfer: "",
       alcohol: {
         vine: false,
-        champagne: false,
-        viski: false,
-        konyak: false,
         vodka: false,
         NotDrink: false,
       },
@@ -272,7 +248,7 @@ ${[
 
 <style scoped>
 .form {
-  margin-bottom: 150px;
+  margin-bottom: 110px;
   z-index: 4;
 }
 .form .container {

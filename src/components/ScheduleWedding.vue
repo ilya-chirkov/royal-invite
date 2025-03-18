@@ -1,143 +1,33 @@
 <template>
-  <div class="timing ">
+  <div class="timing">
     <div class="container">
       <div class="timing__wrap">
         <div>
           <h2 class="timing__title">Время</h2>
         </div>
         <div class="timing__content">
-          <div class="timing__wrapper">
+          <div v-for="(event, index) in events" :key="index" class="timing__wrapper">
             <div class="timing__img">
               <div>
                 <img
                   loading="lazy"
                   class="timing__png"
-                  src="../assets/t1.png"
-                  alt="couple"
+                  :src="require(`@/assets/${event.image}`)"
+                  :alt="event.altText"
                 />
               </div>
             </div>
             <div class="timing__textwrap">
               <div>
                 <div class="timing__textwraptop">
-                  <p class="timing__subtitle">14:40</p>
-                  <p class="timing__text">Трансфер из г. Бобруйска</p>
+                  <p class="timing__subtitle">{{ event.time }}</p>
+                  <p class="timing__text">{{ event.title }}</p>
                 </div>
               </div>
               <div>
                 <div class="timing__textwrapbottom">
                   <p class="timing__text timing__text-bottom">
-                    Возле автобусного вокзала 
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="timing__wrapper">
-            <div class="timing__img">
-              <div>
-                <img
-                  loading="lazy"
-                  class="timing__png"
-                  src="../assets/t3.png"
-                  alt="couple"
-                />
-              </div>
-            </div>
-            <div class="timing__textwrap">
-              <div>
-                <div class="timing__textwraptop">
-                  <p class="timing__subtitle">15:30</p>
-                  <p class="timing__text">Фуршет</p>
-                </div>
-              </div>
-              <div>
-                <div class="timing__textwrapbottom">
-                  <p class="timing__text timing__text-bottom">
-                    Расслабьтесь и познакомьтесь с другими гостями перед
-                    торжеством
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="timing__wrapper">
-            <div class="timing__img">
-              <div>
-                <img
-                  loading="lazy"
-                  class="timing__png"
-                  src="../assets/t2.png"
-                  alt="couple"
-                />
-              </div>
-            </div>
-            <div class="timing__textwrap">
-              <div>
-                <div class="timing__textwraptop">
-                  <p class="timing__subtitle">16:00</p>
-                  <p class="timing__text">Выездная церемония</p>
-                </div>
-              </div>
-              <div>
-                <div class="timing__textwrapbottom">
-                  <p class="timing__text timing__text-bottom">
-                    Разделите с нами трогательный момент создания семьи
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="timing__wrapper">
-            <div class="timing__img">
-              <div>
-                <img
-                  loading="lazy"
-                  class="timing__png"
-                  src="../assets/t4.png"
-                  alt="couple"
-                />
-              </div>
-            </div>
-            <div class="timing__textwrap">
-              <div>
-                <div class="timing__textwraptop">
-                  <p class="timing__subtitle">17:00</p>
-                  <p class="timing__text">Праздничный банкет</p>
-                </div>
-              </div>
-              <div>
-                <div class="timing__textwrapbottom">
-                  <p class="timing__text timing__text-bottom">
-                    Танцуйте, веселитесь и выпевайте за нашу любовь!
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="timing__wrapper">
-            <div class="timing__img">
-              <div>
-                <img
-                  loading="lazy"
-                  class="timing__png"
-                  src="../assets/t6.png"
-                  alt="couple"
-                />
-              </div>
-            </div>
-            <div class="timing__textwrap">
-              <div>
-                <div class="timing__textwraptop">
-                  <p class="timing__subtitle">23:30</p>
-                  <p class="timing__text">Окончание банкета</p>
-                </div>
-              </div>
-              <div>
-                <div class="timing__textwrapbottom">
-                  <p class="timing__text timing__text-bottom">
-                    Вечер подойдет к концу, а с вами остануться приятные
-                    воспоминания!
+                    {{ event.description }}
                   </p>
                 </div>
               </div>
@@ -150,12 +40,60 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      events: [
+        {
+          time: "14:40",
+          title: "Трансфер",
+          description:
+            "При необходимости трансфера Вас будет ожидать маршрутка, которая отвезет вас прямиком на наше мероприятие!",
+          image: "t1.png",
+          altText: "couple",
+        },
+        {
+          time: "15:30",
+          title: "Фуршет",
+          description:
+            "Расслабьтесь и познакомьтесь с другими гостями перед торжеством",
+          image: "t3.png",
+          altText: "couple",
+        },
+        {
+          time: "16:00",
+          title: "Выездная церемония",
+          description: "Разделите с нами трогательный момент создания семьи",
+          image: "t2.png",
+          altText: "couple",
+        },
+        {
+          time: "17:00",
+          title: "Праздничный банкет",
+          description:
+            "Танцуйте, веселитесь и выпевайте за нашу любовь!",
+          image: "t4.png",
+          altText: "couple",
+        },
+        {
+          time: "23:30",
+          title: "Окончание банкета",
+          description:
+            "Вечер подойдет к концу, а с вами остануться приятные воспоминания!",
+          image: "t6.png",
+          altText: "couple",
+        },
+      ],
+    };
+  },
+};
 </script>
+
+
 
 <style scoped>
   .timing {
-    margin-bottom: 150px;
+    margin-bottom: 110px;
     margin-top: -70px;
   }
   .timing .container {

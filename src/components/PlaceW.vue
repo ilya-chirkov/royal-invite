@@ -45,7 +45,7 @@ export default {};
 <style scoped>
 
 .location {
-    margin-bottom: 150px;
+    margin-bottom: 110px;
   }
   .location__title {
     border-bottom: 1px solid #665f55;

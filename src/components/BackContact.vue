@@ -54,7 +54,7 @@ export default {};
 
 
 .contacts {
-    margin: 0 auto 150px;
+    margin: 0 auto 90px;
   }
   .contacts .container {
     margin: 0 auto;

@@ -2,7 +2,7 @@
   <div class="dresscode">
     <div class="container">
       <div class="dresscode__rapper">
-        <h3 class="dresscode__title">Dress-code</h3>
+        <h3 class="dresscode__title">Дресс-код</h3>
         <p class="dresscode__text">
           Нам будет особенно приятно видеть вас в нарядах цветовой гаммы&nbsp;
           нашей свадьбы:

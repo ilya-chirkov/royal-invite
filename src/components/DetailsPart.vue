@@ -57,7 +57,7 @@ export default {};
 
 
 .details {
-    margin: 0 auto 250px;
+    margin: 0 auto 175px;
     position: relative;
     width: 100%;
   }
