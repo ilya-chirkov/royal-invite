@@ -7,12 +7,12 @@
           Нам будет особенно приятно видеть вас в нарядах цветовой гаммы&nbsp;
           нашей свадьбы:
         </p>
-        <div v-for="(row, rowIndex) in groupedColors" :key="rowIndex" class="dresscode__wrapper">
+        <div v-for="(row, rowIndex) in groupedImages" :key="rowIndex" class="dresscode__wrapper">
           <div 
-            v-for="(color, index) in row" 
+            v-for="(image, index) in row" 
             :key="index" 
             class="dresscode__color"
-            :style="{ backgroundColor: color }"
+            :style="{ backgroundImage: `url(${require(`@/assets/${image}`)})` }"
           ></div>
         </div>
       </div>
@@ -24,17 +24,16 @@
 export default {
   data() {
     return {
-      colors: [
-  "#005f56", "#003f3a", "#00796b", "#009688", "#00bfa5", // Градиенты изумрудного
-  "#000000", "#222222", "#444444", "#666666", "#888888", // Чёрные и серые оттенки
-  "#faeacb", "#f5deb3", "#eed9c4", "#e6cdaa", "#dab896", // Шампань и его градиенты
-  "#ffffff", "#f8f8f8", "#f0f0f0", "#e8e8e8", "#dcdcdc"  // Белые и светлые оттенки
-]
+      images: [
+        'dress12.jpg', 'dress2.jpg','dress8.jpg','dress9.jpg','dress13.jpg',
+        'dress3.jpg', 'dress10.jpg', 'dress4.jpg', 'dress14.jpg', 'dress11.jpg',
+        'dress6.jpg', 'dress15.jpg', 'dress7.jpg', 'dress5.jpg', 'dress1.jpg',
+      ],
     };
   },
   computed: {
-    groupedColors() {
-      return Array.from({ length: 4 }, (_, i) => this.colors.slice(i * 5, i * 5 + 5));
+    groupedImages() {
+      return Array.from({ length: 4 }, (_, i) => this.images.slice(i * 5, i * 5 + 5));
     }
   }
 };
@@ -122,6 +121,9 @@ export default {
   height: clamp(55px, 10vw, 120px);
   width: clamp(55px, 10vw, 120px);
   border-radius: 50%;
+  background-size: contain; 
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 </style>

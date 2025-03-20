@@ -13,30 +13,16 @@
         <div>
           <div class="details__content">
             <div class="details__line"></div>
-            <div class="details__wrapper">
+            <div v-for="(detail, index) in details" :key="index" class="details__wrapper">
               <div class="details__imgwrap">
                 <img class="details__svg" src="../assets/Rectangle159.svg" alt="rect" />
               </div>
               <div class="details__textwrap">
                 <p class="details__text">
-                  Если вы предпочитаете подарить денежный вклад, мы будем очень
-                  благодарны за вашу щедрость и понимание. Это поможет нам
-                  осуществить наши мечты и планы на будущее.
+                  {{ detail.text }}
                 </p>
               </div>
-            </div>
-            <div class="details__wrapper">
-              <div class="details__imgwrap">
-                <img class="details__svg" src="../assets/Rectangle159.svg" alt="rect" />
-              </div>
-              <div class="details__textwrap">
-                <p class="details__text">
-                  Вместо традиционных цветов, мы хотели бы попросить вас
-                  принести с собой бутылочку вашего любимого алкогольного
-                  напитка.
-                </p>
-              </div>
-            </div>
+            </div>          
           </div>
         </div>
       </div>
@@ -50,7 +36,23 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      details: [
+        {
+          text: "Если вы предпочитаете подарить денежный вклад, мы будем очень благодарны за вашу щедрость и понимание. Это поможет нам осуществить наши мечты и планы на будущее.",
+        },
+        {
+          text: "Вместо традиционных цветов, мы хотели бы попросить вас принести с собой бутылочку вашего любимого алкогольного напитка.",
+        },
+        {
+          text: "На территории усадьбы вас ждут живописные уголки для прогулок и уютные места для фотографий. Чтобы насладиться прогулкой без лишних забот, рекомендуем выбрать удобную обувь, особенно если планируете исследовать все красоты этого места.",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style scoped>
@@ -211,14 +213,14 @@ export default {};
     border-left: 1px solid #665f55;
     height: 100%;
     left: 7px;
-    max-height: 200px;
+    max-height: 300px;
     position: absolute;
     top: 0;
     z-index: -100;
   }
   @media (min-width: 320px) and (max-width: 767px) {
     .details__line {
-      max-height: 350px;
+      max-height: 430px;
     }
   }
 </style>

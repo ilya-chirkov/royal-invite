@@ -212,7 +212,7 @@ const submitForm = async () => {
 🥂 *Алкоголь:*
 ${
   [
-    formData.value.alcohol.vine && " Слабоалкогольные",
+    formData.value.alcohol.vine && "Средней крепости (вино)",
     formData.value.alcohol.vodka && " Покрепче",
     formData.value.alcohol.NotDrink && " Безалкогольные напитки",
   ]
