@@ -4,7 +4,7 @@
       <div class="dresscode__rapper">
         <h3 class="dresscode__title">Дресс-код</h3>
         <p class="dresscode__text">
-          Нам будет особенно приятно видеть вас в нарядах цветовой гаммы&nbsp;
+          Нам будет особенно приятно видеть вас в нарядах цветовой гаммы
           нашей свадьбы:
         </p>
         <div v-for="(row, rowIndex) in groupedImages" :key="rowIndex" class="dresscode__wrapper">

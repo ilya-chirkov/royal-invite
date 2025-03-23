@@ -8,34 +8,18 @@
         <div>
           <p class="contacts__text">
             В день торжества мы будем очень заняты, поэтому любой вопрос можно
-            адресовать координатору. Если у вас есть необычный сюрприз или
-            подарок, сообщите об этом ей заранее , чтобы воплотить задуманное в
-            жизнь.
+            адресовать координатору.
           </p>
         </div>
         <div>
-          <p class="contacts__text contacts__text-name">Диана:</p>
+          <p class="contacts__text contacts__text-name">Анна:</p>
         </div>
         <div>
           <div class="contacts__wrap">
             <div>
               <div class="contacts__linkwrap">
-                <a class="contacts__link" href="tel:+37529000000"
-                  >+375290000000</a
-                >
-              </div>
-            </div>
-            <div>
-              <div class="contacts__linkwrap">
-                <a class="contacts__link" href="https://www.instagram.com/"
-                  >Instagram</a
-                >
-              </div>
-            </div>
-            <div>
-              <div class="contacts__linkwrap">
-                <a class="contacts__link" href="https://web.telegram.org/a/"
-                  >Telegram</a
+                <a class="contacts__link" href="tel:+375259356772"
+                  >+375259356772</a
                 >
               </div>
             </div>
@@ -187,7 +171,7 @@ export default {};
     .contacts__wrap {
       align-items: center;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       margin: 0 auto;
       width: 100%;
     }
@@ -196,7 +180,7 @@ export default {};
     .contacts__wrap {
       align-items: center;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       margin: 0 auto;
       width: 100%;
     }

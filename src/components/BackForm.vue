@@ -7,7 +7,7 @@
         </div>
         <div>
           <div class="form__textwrap">
-            <p class="form__text">Просьба заполнить анкету до 01 Июля</p>
+            <p class="form__text">Просьба заполнить анкету до 01 июля</p>
           </div>
         </div>
         <div>
@@ -36,7 +36,7 @@
             </div>
             <div class="form__yes">
               <p class="form__text form__text-subtitle">
-                Планируете ли Вы присутствовать на свадьбе?
+                Планируете ли вы присутствовать на свадьбе?
               </p>
               <div class="checkboxes__row">
                 <div class="checkboxes__item">
