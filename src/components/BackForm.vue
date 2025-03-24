@@ -221,7 +221,8 @@ ${
     .filter(Boolean)
     .join(", ") || "❌ Не пьёт"
 }
-=================================`;
+==========================================`;
+
   try {
     await axios.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {
       chat_id: chatId,
