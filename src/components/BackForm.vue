@@ -117,7 +117,9 @@
                       value="Вино"
                     />
                     <div class="checkbox__checkmark"></div>
-                    <p class="checkbox__body">Напитки средней крепости</p></label
+                    <p class="checkbox__body">
+                      Алкоголь средней крепости
+                    </p></label
                   >
                 </div>
                 <div class="checkboxes__item">
@@ -130,7 +132,7 @@
                       value="Водка"
                     />
                     <div class="checkbox__checkmark"></div>
-                    <p class="checkbox__body">"Покрепче"</p></label
+                    <p class="checkbox__body">Крепкие напитки</p></label
                   >
                 </div>
                 <div class="checkboxes__item">
@@ -143,7 +145,7 @@
                       value="Безалкогольные напитки"
                     />
                     <div class="checkbox__checkmark"></div>
-                    <p class="checkbox__body">Безалкогольные напитки</p></label
+                    <p class="checkbox__body">Только безалкогольные напитки (не пью)</p></label
                   >
                 </div>
               </div>
@@ -196,10 +198,10 @@ const submitForm = async () => {
   const botToken = process.env.VUE_APP_BOT_TOKEN;
   const chatId = process.env.VUE_APP_CHAT_ID;
 
-  const message = `🎉 *Новая анкета №${(userNumber.value =
-    userNumber.value + 1)}* 🎉
+  const message = `*Новая анкета №${(userNumber.value =
+    userNumber.value + 1)}*
 
-👤 *Гость:* ${formData.value.userName}
+👤 *Гость: ${formData.value.userName}
 
 💍 *Присутствие:* ${
     formData.value.attending === "Да"
@@ -212,16 +214,14 @@ const submitForm = async () => {
 🥂 *Алкоголь:*
 ${
   [
-    formData.value.alcohol.vine && "Средней крепости (вино)",
-    formData.value.alcohol.vodka && " Покрепче",
+    formData.value.alcohol.vine && "Алкоголь средней крепости",
+    formData.value.alcohol.vodka && " Крепкие напитки",
     formData.value.alcohol.NotDrink && " Безалкогольные напитки",
   ]
     .filter(Boolean)
     .join(", ") || "❌ Не пьёт"
 }
-
-✨ *Спасибо за ответ!* ✨`;
-
+=================================`;
   try {
     await axios.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {
       chat_id: chatId,
