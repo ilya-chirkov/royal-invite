@@ -21,10 +21,9 @@
 - **Tailwind CSS** для стилизации  
 - **Telegram Bot API** для отправки данных
 
-- ## Часть скриншотов
-![изображение](https://github.com/user-attachments/assets/37980c21-a4ac-40b7-bc46-b7c9e2b7b46a)
-![изображение](https://github.com/user-attachments/assets/c4551e41-ebf1-411f-a134-4d0248a3d456)
-![изображение](https://github.com/user-attachments/assets/abe5d696-5135-460e-956b-8ade9b0731ee)
-![изображение](https://github.com/user-attachments/assets/c3678bad-cdc4-4bff-bf98-2fdc87d67ad5)
+- ## Скрин сайта
+![image](https://github.com/user-attachments/assets/89cfd219-f32e-4cbc-bf29-cd4261177700)
+
+
 
 
