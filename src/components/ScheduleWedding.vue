@@ -53,7 +53,7 @@ export default {
           altText: "couple",
         },
         {
-          time: "15:30",
+          time: "15:20",
           title: "Фуршет",
           description:
             "Расслабьтесь и познакомьтесь с другими гостями перед торжеством",
